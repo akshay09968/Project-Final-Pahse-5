@@ -1,0 +1,14 @@
+package coms.ProjectFinalPhase5;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ProjectFinalPhase5Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ProjectFinalPhase5Application.class, args);
+		System.out.println("Server started.........");
+	}	
+
+}
