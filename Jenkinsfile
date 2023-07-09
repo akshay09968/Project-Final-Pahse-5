@@ -4,7 +4,7 @@ pipeline {
         stage("Clone Git Repository") {
             steps {
                 git(
-                    url: "https://github.com/Vin200/projectPhase5.git",
+                    url: "https://github.com/akshay09968/Project-Final-Pahse-5.git",
                     branch: "master",
                     changelog: true,
                     poll: true
@@ -14,7 +14,7 @@ pipeline {
         
         stage('Build and run application') {
             steps {
-                sh 'java -jar projectPhase5-0.0.1-SNAPSHOT.jar & echo $! > ./pid.file &'
+                sh 'java -jar Project-Final-Phase-5-0.0.1-SNAPSHOT.jar & echo $! > ./pid.file &'
           
                 }
             }
@@ -34,7 +34,7 @@ pipeline {
         
         stage("Push to Git Repository") {
             steps {
-                withCredentials([gitUsernamePassword(credentialsId: '96fd7231-9ac1-49b5-9856-396ff544a983', gitToolName: 'Default')]) {
+                withCredentials([gitUsernamePassword(credentialsId: '171b3da2-feac-454c-8159-64e17860c1ae', gitToolName: 'Default')]) {
                     sh "git push -u origin master"
                 }
             }
